@@ -1,0 +1,79 @@
+html{
+  height: 100%;
+}
+body{
+  /* height: 100%; */
+  overflow-x: hidden;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+  h1{
+    color: #CB1C8D;
+  }
+  
+  h2{
+    color: #F56EB3;
+  }
+
+.project{
+    height: 100%;
+    background-image: linear-gradient(#443C68,#635985);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5%;
+    animation: fadeup 0.5s;
+}
+
+.card{
+    width: 200px;
+    margin: 10% 25%;
+}
+
+.card:hover{
+    width: 250px;
+}
+
+
+footer{
+  background-color: rgb(73, 73, 73);
+  padding-top: 2%;
+  color: white;
+  text-align: center;
+}
+      
+.fa-footer{
+  margin: 0 20px;
+  color: #ffffff;
+}
+
+@keyframes fadeup {
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+    
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
