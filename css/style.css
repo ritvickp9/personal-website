@@ -85,7 +85,7 @@ h2{
 }
 
 .workPic{
-  top: 850px;
+  top: 950px;
   left: 0;
   display: inline;
   position: absolute;
@@ -102,7 +102,7 @@ h2{
 }
 
 .studyPic{
-  top: 1400px;
+  top: 1500px;
   left: 0;
   display: inline;
   position: absolute;
@@ -138,7 +138,7 @@ table{
 }
 
 .skill1Pic{
-  top: 2200px;
+  top: 2300px;
   left: 0;
   display: inline;
   position: absolute;
@@ -146,7 +146,7 @@ table{
 }
 
 .skill2Pic{
-  top: 2200px;
+  top: 2300px;
   right: 0;
   display: inline;
   position: absolute;
