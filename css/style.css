@@ -1,18 +1,27 @@
 html{
   height: 100%;
+  width: 100%;
+  overflow-y: visible;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
 }
 
 .wrapper{
   /* height: 100vh; */
-  overflow-y: auto;
-  overflow-x: hidden;
   /* width: 100%; */
+  margin: 0px;
+  padding: 0px;
 }
 
 @media (max-width: 730px){
   body{
     height: 100%;
   }
+}
+
+.navbar{
+  width: 100vi;
 }
 
 ::-webkit-scrollbar{
@@ -112,8 +121,8 @@ h2{
 }
 
 .life{
-  background-color: #BFACE2;
-  background-image: linear-gradient(#393053,#18122B);
+  background-color: white;
+  /* background-image: linear-gradient(#393053,#18122B); */
   text-align: center;
   height: 800px;
   color: #645CBB;
@@ -199,10 +208,10 @@ table{
   }
 
 #contact-me{
-  background-image: linear-gradient(#393053,#18122B);
+  /* background-image: linear-gradient(#393053,#18122B); */
+  background-color: white;
   padding: 100px 0;
   text-align: center;
-  background-color: #BFACE2;
   color: #645CBB;
   z-index: 1;
 }
