@@ -1,3 +1,10 @@
+:root {
+  --backgroundDark: #1F2544;
+  --backgroundLight: #474F7A;
+  --textBackground: #81689D;
+  --textColour: #FFD0EC;
+}
+
 html{
   height: 100%;
   width: 100%;
@@ -23,6 +30,7 @@ html{
 .navbar{
   width: 100vi;
 }
+
 
 ::-webkit-scrollbar{
   display: none;
@@ -57,7 +65,7 @@ h2{
   z-index: 2;
   background: rgba(0, 0, 0, 0.733);
   border-radius: 20px;
-  width: 250px;
+  width: 20vw;
 }
 
 .rocket{
@@ -91,20 +99,18 @@ h2{
 }
 
 .workex{
-  background-image: linear-gradient(#443C68,#635985);
-  color: #9e9ad4;
+  /* background-image: linear-gradient(#443C68,#635985); */
+  background-color: var(--backgroundDark);
+  color: var(--textColour);
   font-weight: bold;
-  padding-top: 150px;
   height: 500px;
   z-index: 0;
   text-align: center;
+  height: 100vh;
 }
 
 .workex p{
-  margin-left: 30%;
-  background-color: #50387d;
-  width: 40%;
-  border-radius: 50px;
+  margin:auto;
 }
 
 .workexContent{
@@ -113,7 +119,7 @@ h2{
 }
 
 .workPic{
-  top: 15%;
+  top: 40%;
   left: 5%;
   display: block;
   position: relative;
@@ -121,10 +127,10 @@ h2{
 }
 
 .life{
-  background-color: rgb(249, 246, 255);
+  background-color: var(--backgroundLight);
   /* background-image: linear-gradient(#393053,#18122B); */
   text-align: center;
-  height: 800px;
+  height: 100vh;
   color: #645CBB;
 }
 
@@ -152,15 +158,15 @@ table{
 
 #skills{
   padding-top: 50px;
-  background-color: #EBC7E6;
-  background-image: linear-gradient(#443C68,#635985);
+  background-color: var(--backgroundDark);
+  /* background-image: linear-gradient(#443C68,#635985); */
   text-align: center;
-  height: 800px;
+  height: 100vh;
 }
 
 .skillContent{
   position: relative;
-  bottom: 45%;
+  bottom: 30%;
 }
 
 .skill1Pic{
@@ -168,7 +174,7 @@ table{
   right: 10%;
   display: inline-block;
   position: relative;
-  height: 300px;
+  height: 40vh;
   z-index: 0;
 }
 
@@ -177,7 +183,7 @@ table{
   left: 10%;
   display: inline-block;
   position: relative;
-  height: 300px;
+  height: 40vh;
   z-index: 0;
 }
 
@@ -296,4 +302,302 @@ footer{
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+/* Work Ex Card */
+
+.workexCard {
+  overflow: visible;
+  width: 15vw;
+  height: 30vh;
+  display: inline-block;
+  margin: 1vh 5vw;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.workexCard:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  height: 25vh;
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.workexTitle {
+  font-size: 11px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.workexTitle p {
+  font-size: medium;
+  width: 80%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* Contact Card */
+
+.contactCard svg {
+  height: 25px;
+}
+
+.contactCard {
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e7e7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  height: 50px;
+  width: 200px;
+}
+
+.contactCard::before, .contactCard::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  transition: 0.25s linear;
+  z-index: 1;
+}
+
+.contactCard::before {
+  content: "";
+  left: 0;
+  justify-content: flex-end;
+  background-color: #4d60b6;
+}
+
+.contactCard::after {
+  content: "";
+  right: 0;
+  justify-content: flex-start;
+  background-color: #4453a6;
+}
+
+.contactCard:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.contactCard:hover span {
+  opacity: 0;
+  z-index: -3;
+}
+
+.contactCard:hover::before {
+  opacity: 0.5;
+  transform: translateY(-100%);
+}
+
+.contactCard:hover::after {
+  opacity: 0.5;
+  transform: translateY(100%);
+}
+
+.contactCard span {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-family: 'Fira Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+}
+
+.contactCard .social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.contactCard .social-link svg {
+  text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+  transform: scale(1);
+}
+
+.contactCard .social-link:hover {
+  background-color: rgba(249, 244, 255, 0.774);
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
