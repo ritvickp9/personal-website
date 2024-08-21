@@ -140,8 +140,8 @@ h2{
 }
 
 .studyPic{
-  top: 40%;
-  left: 7%;
+  top: -30%;
+  left: 130%;
   display: block;
   position: relative;
   height: 30%;
@@ -610,4 +610,67 @@ footer{
   100% {
     transform: scale(1);
   }
+}
+
+@media (min-width: 730px){
+  body{
+    height: 100%;
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+h1{
+  color: #CB1C8D;
+}
+
+h2{
+  color: #F56EB3;
+}
+
+#project{
+  height: 100vh;
+  background-color: var(--backgroundLight);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5%;
+  animation: fadeup 0.5s;
+  color: var(--textColour);
+}
+
+.card{
+  width: 200px;
+  margin: 10% 25%;
+}
+
+.card:hover{
+  width: 250px;
+}
+
+
+@keyframes fadeup {
+  0%{
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+  }
+  
+}
+
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
